@@ -1,2 +1,4 @@
 # GianWebApps
 uma forma de simular um webapp ou Site Specific Browser
+
+# DO NOT TRY TO USE THIS, SINCE THIS IS JUST FOR ME AND MY FRIENDS I CAN'T GUARANTEE THIS WILL WORK FOR YOU NOR WILL I EXPLAIN HOW TO USE
