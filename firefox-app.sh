@@ -33,9 +33,29 @@ Terminal=false' > $1.desktop
 firefox --CreateProfile $1
 #Copiar /chrome/
 cd ~/.mozilla/firefox/*.$1
-git clone https://github.com/KubGames/GianWebApps
-mv -f GianWebApps/chrome chrome
-rm -r -f GianWebApps
-
+#Habilitar a config
 printf 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets",true);' > user.js
+
+# configurar o chrome para retirar tudo
+mkdir chrome
+cd chrome
+touch userChrome.css
+printf 'TabsToolbar {
+  visibility: collapse;
+}
+
+:root:not([customizing]) #navigator-toolbox:not(:hover):not(:focus-within) {
+  max-height: 1px;
+  min-height: calc(0px);
+  overflow: hidden;
+}
+
+#navigator-toolbox::after {
+  display: none !important;
+}
+
+#main-window[sizemode="maximized"] #content-deck {
+  padding-top: 8px;
+}
+' > userChrome.css
 pwd
