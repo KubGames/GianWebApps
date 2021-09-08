@@ -37,5 +37,5 @@ git clone https://github.com/KubGames/GianWebApps
 mv -f GianWebApps/chrome chrome
 rm -r -f GianWebApps
 
-printf 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets","true");' > user.js
+printf 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets",true);' > user.js
 pwd
