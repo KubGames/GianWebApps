@@ -1,13 +1,12 @@
 #!/bin/sh
-# Verificando se o usuário é root 
-if [ $(id -u) -eq 0 ]
+if [ -e firefox-app.sh ]
 then
-	# se for root, criar o firefox-app no /bin/
-	cp firefox-app.sh /bin/firefox-app
-	printf 'foi adicionado à /bin/ o \n comando firefox-app :)'
+	mkdir ~/.local/bin
+	cp firefox-app.sh ~/.local/bin/firefox-app
+	printf 'foi adicionado à ~/.local/bin/ o comando firefox-app :) \n\n'
+	source ~/.profile
 fi
 
-printf '\n ---- \nlembre-se de rodar esse script em\n sudo pelo menos uma vez para adicionar o \ncomando firefox-app na /bin/\n ----- \n'
 
 cd ~/.local/share/applications/
 
